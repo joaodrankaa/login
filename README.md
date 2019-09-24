@@ -29,7 +29,7 @@ Pressione Enter
 
   - Caso necessario,apos o login, digite seu nome e email e clique em *continue*
 
-  - Selecione o repositorio **Login** e logo abaic=xo clique no botão azul
+  - Selecione o repositorio **Login** e logo abaixo clique no botão azul
  *clone...*
 
   - Clique no botão *chose* e encontre no disco local C: a pasta xampp e dentro dela htdocs
