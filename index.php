@@ -23,7 +23,7 @@
             <div class="col-lg-4 offset-lg-4" id="alerta">
                 <div class="alert alert-success text-center">
                     <strong class="resultado">
-                    Alo Ha Tchurmaaaaaaaaaaaa!
+                        Alo Ha Tchurmaaaaaaaaaaaa!
                     </strong>
                 </div>
             </div>
@@ -32,16 +32,40 @@
     <section class="row">
         <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixaLogin">
             <h2 class="text-center mt-2">
-                    Entrar no Sistema
-            </h2>
-                <form action="#" method="post"class="p-2" id="forLogin">
+                Entrar no Sistema
+        </h2>
+            <form action="#" method="post" class="p-2" id="forLogin">
+                <div class="form-group">
+                    <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Nome do Usuario" class="from-control">
+                </div>
                     <div class="form-group">
-                        <input type="text" name="" id="">
+                        <input type="password" name="senhaUsuario" id="senhaUsuario" placeholder="Senha" class="from-control">
                     </div>
-                </form>
-            </div>
-        </section>
-    </main>
+                        <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                        <input type="checkbox" name="lembrar" id="lembrar" 3 class="custom-control-input">
+                            <label for="lembrar"class="custom-control-label">
+                                lembrar de mim.
+                            </label>
+                            <a href="#" class="float-right" id="btnEsqueci">
+                                Esqueci a senha!
+                            </a>
+                        </div>
+                    </div>
+                <div class="form-group">
+                    <input type="submit" value="Entrar" name="btnEntrar" 
+                    class="btn btn-primary btn-block">
+                </div>
+                    <div class="form-group">
+                        <p>Novo Usuario?<a href="#" id="btnRegistrar"> 
+                        Registra-se aqui!!
+                        </a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </section>  
+</main>
 
 
 
