@@ -7,7 +7,7 @@ layout Bootstrap para os formularios
 - formulario de recuperação de senha
 - ~formulario de cadastro de novos usuarios~
 
-# aula01 - 23/09/2019 : godmode
+# aula01 - 23/09/2019 :godmode:
 🍀começou a primavera🍀
 aula inicial, configuração do projeto no Github.
 e criação do passo a passo.
