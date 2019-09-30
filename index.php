@@ -72,33 +72,64 @@
                 <h2 class="text-center mt-2">
                     Gerar Nova Senha
                 </h2>
-                    <form action="#" method="post" id="formSenha" 
-                    class="p-2">
-                        <div class="forn-group">
-                            <small class="text-muted">
-                                Para Gerar um nova senha, digite seu e-mail. Clique no link gerado
-                            </small>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="emailGerarSenha" 
-                            id="emailGerarSenha" class="form-control" 
-                            placeholder="E-mail de recuperação de senha">
-                        </div>
-                            <div class="form-group">
-                                <input type="submit" value="Gerar"name="btnGerar" 
-                                id="btnGerar" class="btn btn-primary btn-block">
-                            </div>
-                        <div class="form-group">
-                            <p class="text-center">
-                                Ja registrado? <a href="#" id="btnJaRegistrado">
-                                    Entrar po aqui.
-                                </a>
-                            </p>
-                        </div>
-                    </form>
-                </div>
+                <form action="#" method="post" id="formSenha" class="p-2">
+                    <div class="forn-group">
+                        <small class="text-muted">
+                            Para Gerar um nova senha, digite seu e-mail. Clique no link gerado
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="emailGerarSenha" id="emailGerarSenha" class="form-control" placeholder="E-mail de recuperação de senha">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Gerar" name="btnGerar" id="btnGerar" class="btn btn-primary btn-block">
+                    </div>
+                    <div class="form-group">
+                        <p class="text-center">
+                            Ja registrado? <a href="#" id="btnJaRegistrado">
+                                Entrar po aqui.
+                            </a>
+                        </p>
+                    </div>
+                </form>
+            </div>
         </section>
         <!-- fim da seção de recuperação de senha -->
+        <!-- Inicio do formulario de cadastro de novos usuarios -->
+        <section class="row mt-5">
+            <div class="col-lg-4 offset-lg-4 bg-light rounded " id="caixaRegsitro">
+                <h2 class="text-center mt-2">Regsitre-se aqui</h2>
+                <form action="#" method="post" class="p-2" id="formRegistro">
+                    <div class="form-group">
+                        <input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control" placeholder="Nome Completo">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="nomeDoUsuario" id="nomeDoUsuario" 
+                        
+                        class="form-control" placeholder="Nome de Usuário">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" name="emailUsuario" id="emailUsuario"
+                        class="form-control" placeholder="E-mail">
+                    </div>
+
+                    <div>
+                        <input type="password" name="senhaUsuario" id="senhaUsuario" 
+                        class="form-control" placeholder="Senha">
+
+                    </div>
+
+                </form>
+            </div>
+
+
+        </section>
+
+
+
+        <!-- Final do formulario de cadastro de novos usuarios -->
     </main>
 
 
