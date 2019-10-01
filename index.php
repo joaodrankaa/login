@@ -15,11 +15,11 @@
 
     <title>Sistem de Login</title>
     <style>
-    #alerta, #caixaSenha, #caixaRegistro{
-        display:none;
-    }
-
-    
+        #alerta,
+        #caixaSenha,
+        #caixaRegistro {
+            display: none;
+        }
     </style>
 
 </head>
@@ -45,17 +45,15 @@
                 <form action="#" method="post" class="p-2" id="forLogin">
 
                     <div class="form-group">
-                        <input type="text" name="nomeUsuario" id="nomeUsuario" 
-                        placeholder="Nome do Usuario" class="form-control">
+                        <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Nome do Usuario" class="form-control">
                     </div>
 
                     <div class="form-group">
-                        <input type="password" name="senhaUsuario" id="senhaUsuario" 
-                        placeholder="Senha" class="form-control">
+                        <input type="password" name="senhaUsuario" id="senhaUsuario" placeholder="Senha" class="form-control">
                     </div>
                     <div class="form-group">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" name="lembrar" id="lembrar"  class="custom-control-input">
+                            <input type="checkbox" name="lembrar" id="lembrar" class="custom-control-input">
                             <label for="lembrar" class="custom-control-label">
                                 lembrar de mim.
                             </label>
@@ -65,8 +63,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Entrar" name="btnEntrar" 
-                        class="btn btn-primary btn-block">
+                        <input type="submit" value="Entrar" name="btnEntrar" class="btn btn-primary btn-block">
                     </div>
                     <div class="form-group">
                         <p>Novo Usuario?<a href="#" id="btnRegistrarNovo">
@@ -115,29 +112,23 @@
                 <h2 class="text-center mt-2">Regsitre-se aqui</h2>
                 <form action="#" method="post" class="p-2" id="formRegistro">
                     <div class="form-group">
-                        <input type="text" name="nomeCompleto" id="nomeCompleto" 
-                        class="form-control" placeholder="Nome Completo">
+                        <input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control" placeholder="Nome Completo">
                     </div>
 
                     <div class="form-group">
-                        <input type="text" name="nomeDoUsuario" id="nomeDoUsuario" 
-                        class="form-control" placeholder="Nome de Usuário">
+                        <input type="text" name="nomeDoUsuario" id="nomeDoUsuario" class="form-control" placeholder="Nome de Usuário">
                     </div>
 
                     <div class="form-group">
-                        <input type="email" name="emailUsuario" id="emailUsuario" 
-                        class="form-control" placeholder="E-mail">
+                        <input type="email" name="emailUsuario" id="emailUsuario" class="form-control" placeholder="E-mail">
                     </div>
 
                     <div class="form-group">
-                        <input type="password" name="senhaUsuario" id="senhaUsuario" 
-                        class="form-control" placeholder="Senha">
+                        <input type="password" name="senhaUsuario" id="senhaUsuario" class="form-control" placeholder="Senha">
                     </div>
 
                     <div class="form-group">
-                        <input type="password" name="senhaUsuarioConfirmar" 
-                        id="senhaUsuarioConfirmar" class="form-control" 
-                        placeholder="Confimar senha">
+                        <input type="password" name="senhaUsuarioConfirmar" id="senhaUsuarioConfirmar" class="form-control" placeholder="Confimar senha">
                     </div>
 
                     <div class="form-group">
@@ -150,8 +141,7 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="submit" value="Registrar" name="btnRegistrar" 
-                        id="btnRegistrar" class="btn btn-primary btn-block">
+                        <input type="submit" value="Registrar" name="btnRegistrar" id="btnRegistrar" class="btn btn-primary btn-block">
                     </div>
 
                     <div class="form-group">
@@ -179,10 +169,29 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
+
     <script>
         //codigo jQuery para mostrar e ocultar os formularios
-    
+        $(function() {
+                    $("#btnEsqueci").click(function() {
+                        $("#caixaLogin").hide(); //ocultar
+                        $("#caixaSenha").show(); //mostrar
+                    });
+
+                    $("#btnJaRegistrado").click(function() {
+                        $("#caixaSenha").hide(); //ocultar
+                        $("#caixaLogin").show(); //mostrar});
+                    });
+
+                    $("#btnRegistrarNovo").click(function() {
+                        $("#caixaSenha").hide(); //ocultar
+                        $("#caixaRegistro").show(); //mostrar});
+                    });
+
+                    $("#btnJaRegistrado2").click(function() {
+                        $("#caixaLogin").show(); //ocultar
+                        $("#caixaRegistro").hide(); //mostrar});
+                    });
     </script>
 </body>
 
