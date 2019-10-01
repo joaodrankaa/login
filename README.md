@@ -2,13 +2,14 @@
 sistema de login em PHP e Javascript
 
 # aula04 - 01/10/2019
-
+- validação com HTML5
+- ~Validação dos campos de jQuery validate ~
 
 
 # aula03 - 30/09/2019
 - Formulario de  Cadastro de novos usuarios
-- Validação dos campos de jQuery validate 
-- ~Ocultar e mostrar os formulario com jQuery~
+- ~Validação dos campos de jQuery validate ~
+- Ocultar e mostrar os formulario com jQuery
 
  jQuery é uma biblioteca de funções javascript
 

@@ -173,25 +173,26 @@
     <script>
         //codigo jQuery para mostrar e ocultar os formularios
         $(function() {
-                    $("#btnEsqueci").click(function() {
+                    $("#btnEsqueci").click(function () {
                         $("#caixaLogin").hide(); //ocultar
                         $("#caixaSenha").show(); //mostrar
                     });
 
-                    $("#btnJaRegistrado").click(function() {
+                    $("#btnJaRegistrado").click(function () {
                         $("#caixaSenha").hide(); //ocultar
-                        $("#caixaLogin").show(); //mostrar});
+                        $("#caixaLogin").show(); //mostrar}
                     });
 
-                    $("#btnRegistrarNovo").click(function() {
-                        $("#caixaSenha").hide(); //ocultar
-                        $("#caixaRegistro").show(); //mostrar});
+                    $("#btnRegistrarNovo").click(function () {
+                        $("#caixaLogin").hide(); //ocultar
+                        $("#caixaRegistro").show(); //mostrar}
                     });
 
-                    $("#btnJaRegistrado2").click(function() {
+                    $("#btnRegistrado2").click(function () {
                         $("#caixaLogin").show(); //ocultar
-                        $("#caixaRegistro").hide(); //mostrar});
+                        $("#caixaRegistro").hide(); //mostrar}
                     });
+        });
     </script>
 </body>
 
