@@ -78,7 +78,7 @@
         <!-- Final da Seção de login -->
         <br>
         <!-- formulario de recuperção de senha -->
-        
+
         <section class="row mt-5">
             <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixaSenha">
                 <h2 class="text-center mt-2">
@@ -188,7 +188,7 @@
                     }
                 }
             });
-            
+
 
             $("#forLogin").validate();
 
@@ -215,6 +215,36 @@
                 $("#caixaLogin").show(); //ocultar
                 $("#caixaRegistro").hide(); //mostrar}
             });
+
+            //cadastro de novo usuario 
+            $("#btnRegistrar").click (function(e) {
+                if(document
+                .querySelector("#formRegistro")
+                .checkValidity()){
+                    e.preventDefault();//nao abri outra pagina
+                    //envio dos dados via ajax
+                    $.ajax({
+                        url:'recebe_dados.php',
+                        method: 'post',
+                        data: $("#formRegistro").serialize()+'&action=cadastro',
+                        success:function(resposta){
+                            $("#alerta").show();
+                            $(".resultado").html(resposta);
+                        }
+                    });
+                }
+                return true;
+            });
+            //login 
+            $("#btnEntrar").click (function(e) {
+
+            });
+
+            //recuperção de senha
+            $("#btnGerar").click (function(e) {
+
+            });
+
         });
 
 
