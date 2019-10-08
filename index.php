@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Entrar" name="btnEntrar" class="btn btn-primary btn-block">
+                        <input type="submit" value="Entrar" name="btnEntrar" id="btnEntrar" class="btn btn-primary btn-block">
                     </div>
                     <div class="form-group">
                         <p>Novo Usuario?<a href="#" id="btnRegistrarNovo">
@@ -217,17 +217,17 @@
             });
 
             //cadastro de novo usuario 
-            $("#btnRegistrar").click (function(e) {
-                if(document
-                .querySelector("#formRegistro")
-                .checkValidity()){
-                    e.preventDefault();//nao abri outra pagina
+            $("#btnRegistrar").click(function(e) {
+                if (document
+                    .querySelector("#formRegistro")
+                    .checkValidity()) {
+                    e.preventDefault(); //nao abri outra pagina
                     //envio dos dados via ajax
                     $.ajax({
-                        url:'recebe_dados.php',
+                        url: 'recebe_dados.php',
                         method: 'post',
-                        data: $("#formRegistro").serialize()+'&action=cadastro',
-                        success:function(resposta){
+                        data: $("#formRegistro").serialize() + '&action=cadastro',
+                        success: function(resposta) {
                             $("#alerta").show();
                             $(".resultado").html(resposta);
                         }
@@ -235,14 +235,48 @@
                 }
                 return true;
             });
-            //login 
-            $("#btnEntrar").click (function(e) {
 
+
+            //login 
+            $("#btnEntrar").click(function(e) {
+                if (document
+                    .querySelector("#forLogin")
+                    .checkValidity()) {
+                    e.preventDefault(); //nao abri outra pagina
+                    //envio dos dados via ajax
+                    $.ajax({
+                        url: 'recebe_dados.php',
+                        method: 'post',
+                        data: $("#forLogin").serialize() + '&action=login',
+                        success: function(resposta) {
+                            $("#alerta").show();
+                            $(".resultado").html(resposta);
+                        }
+                    });
+                }
+                return true;
             });
 
-            //recuperção de senha
-            $("#btnGerar").click (function(e) {
 
+
+            //recuperção de senha
+            $("#btnGerar").click(function(e) {
+                if (document
+                    .querySelector("#formSenha")
+                    .checkValidity()) {
+                    e.preventDefault(); //nao abri outra pagina
+                    //envio dos dados via ajax
+                    $.ajax({
+                        url: 'recebe_dados.php',
+                        method: 'post',
+                        data: $("#formSenha").serialize() + '&action=senha',
+                        success: function(resposta) {
+                            $("#alerta").show();
+                            $(".resultado").html(resposta);
+                        }
+                    });
+                }
+                return true;
             });
 
         });
