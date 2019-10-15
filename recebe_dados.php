@@ -1,4 +1,15 @@
 <?php
+//conexao com o banco de dados
+require_once 'configBD.php';
+
+function verificar_entrada($entrada){
+    //filtrando a entrada
+    $saida = htmlspecialchars($entrada);
+    $saida = stripslashes($saida);
+    $saida = trim($saida);
+    return $saida;//retorna a saida limpa
+}
+
 
 
 //teste se existe a ação
