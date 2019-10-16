@@ -65,6 +65,7 @@ function verificar_entrada($entrada){
 
                 }else{
                     echo "<p class='text-danger'>Usuario nao cadastrado</p>";
+                    
                     echo "<p class='text-danger'>Algo deu errado</p>";
 
                 }
