@@ -67,34 +67,45 @@ function verificar_entrada($entrada){
                     echo "<p class='text-danger'>Usuario nao cadastrado</p>";
                     
                     echo "<p class='text-danger'>Algo deu errado</p>";
-
                 }
-
-
-
             }
         }
 
 
-    }else if($_POST['action'] =='login'){
-        //senão, teste se ação e login
-        echo "\n<p>login</p>"; //pre-formatada
-        echo "\n<pre>";
-        print_r($_POST);
-        echo "\n</pre>";
+            }else if($_POST['action'] =='login'){
+        $nomeUsuario = verificar_entrada($_POST['nomeUsuario']);
+        $senhaUsuario = verificar_entrada($_POST['senhaUsuario']);
+        $senha = sha1($senhaUsuario);
 
-    }else if($_POST['action'] =='senha'){
-        //senão, teste se ação é recuperar senha
-        echo "\n<p>senha</p>"; //pre-formatada
-        echo "\n<pre>";
-        print_r($_POST);
-        echo "\n</pre>";
+        $sql = $connect->prepare("SELECT * FROM usuario WHERE senhaDoUsuario = ? AND nomeDoUsuario = ?");
 
-    }else{
-            header("location:index.php");
+        $sql->bind_param("ss", $senha, $nomeUsuario );
+
+        $sql->execute();
+
+        $busca = $sql->fetch();
+
+        if($busca != null){
+            echo "ok";
+        }else{
+            echo "<p class='text-danger'>";
+            echo "Falhou a entrada no sistema.Nome de usuario ou senha invalidos";
+            echo "</p>";
+            exit();
         }
-}else{
-    //redirecionando para o index.php,negado o acesso 
-    //a esse arquivo diretamente
-        header("location:index.php");
-}
+            
+            }else if($_POST['action'] =='senha'){
+                //senão, teste se ação é recuperar senha
+                echo "\n<p>senha</p>"; //pre-formatada
+                echo "\n<pre>";
+                print_r($_POST);
+                echo "\n</pre>";
+
+            }else{
+                    header("location:index.php");
+                }
+        }else{
+            //redirecionando para o index.php,negado o acesso 
+            //a esse arquivo diretamente
+                header("location:index.php");
+        }
