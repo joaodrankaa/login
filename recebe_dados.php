@@ -1,4 +1,7 @@
 <?php
+//iniciando a sessão
+session_start();
+
 //conexao com o banco de dados
 require_once 'configBD.php';
 
@@ -86,6 +89,7 @@ function verificar_entrada($entrada){
         $busca = $sql->fetch();
 
         if($busca != null){
+            $_SESSION['nomeDoUsuario'] = $nomeUsuario;
             echo "ok";
         }else{
             echo "<p class='text-danger'>";

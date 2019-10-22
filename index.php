@@ -250,12 +250,17 @@
                         data: $("#forLogin").serialize() + '&action=login',
                         success: function(resposta) {
                             $("#alerta").show();
-                            $(".resultado").html(resposta);
+                            //$(".resultado").html(resposta);
+                            if (resposta === "ok") {
+                                window.location = "perfil.php";
+                            } else {
+                                $(".resultado").html(resposta);
                         }
-                    });
-                }
-                return true;
-            });
+                    }
+                });
+            }
+            return true;
+        });
 
 
 
