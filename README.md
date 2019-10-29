@@ -7,7 +7,6 @@ sistema de login em PHP e Javascript
 - Conceito de sessão
 
 
-
 # aula07 - 18/10/2019
 - Inicio de autentição e entrada no sistema
 
