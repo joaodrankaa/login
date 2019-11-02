@@ -48,23 +48,20 @@
 
                     <div class="form-group">
                         <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Nome do Usuario" class="form-control" required minlength="5" value="<?=
-                                                                                                                                                                    isset($_COOKIE['nomeDoUsuario']) ? $_COOKIE['nomeDoUsuario'] : "";
-                                                                                                                                                                ?>">
+                                                                                                                                                                    isset($_COOKIE['nomeDoUsuario']) ? $_COOKIE['nomeDoUsuario'] : ""; ?>">
+
+
                     </div>
 
                     <div class="form-group">
                         <input type="password" name="senhaUsuario" id="senhaUsuario" placeholder="Senha" class="form-control" required minlength="6" value="<?=
-                                                                                                                                                                isset($_COOKIE['senhaDoUsuario']) ? $_COOKIE['senhaDoUsuario'] : "";
-                                                                                                                                                            ?>">
+                                                                                                                                                                isset($_COOKIE['senhaDoUsuario']) ? $_COOKIE['senhaDoUsuario'] : ""; ?>">
                     </div>
                     <div class="form-group mt-5">
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" name="lembrar" id="lembrar" class="custom-control-input" <?=
-                                                                                                                isset($_COOKIE['senhaDoUsuario']) ? " checked" : ""
+                                                                                                                isset($_COOKIE['senhaDoUsuario']) ? " checked" : "";
                                                                                                             ?>>
-
-
-
                             <label for="lembrar" class="custom-control-label">
                                 lembrar de mim.
                             </label>
@@ -76,8 +73,6 @@
                     <div class="form-group">
                         <input type="submit" value="Entrar" name="btnEntrar" id="btnEntrar" class="btn btn-primary btn-block">
                     </div>
-
-
                     <div class="form-group">
                         <p>Novo Usuario?<a href="#" id="btnRegistrarNovo">
                                 Registra-se aqui!!
@@ -85,11 +80,12 @@
                         </p>
                     </div>
 
-                    <div class="form-group">
-                        <a class="text-center" href="#" id="btnMostrar">
-                            Mostrar
-                        </a>
 
+                    <div class="form-group">
+                        <p>Novo formulario<a href="#caixaMostrar" id="btnNovo">
+                                novo!!
+                            </a>
+                        </p>
                     </div>
 
                 </form>
@@ -129,6 +125,88 @@
         </section>
         <!-- fim da seção de recuperação de senha -->
 
+        <!-- inicio novo -->
+
+        <section class="row mt-5">
+            <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixaNovo">
+                <h2 class="text-center mt-2">
+                    Nova
+                </h2>
+                <form action="#" method="post" id="" class="p-2">
+                    <div class="form-group">
+                        <small class="text-muted">
+
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nomeCompleto">Nome Completo</label>
+                        <input type="text" name="nomeCompleto" id="nomeCompleto" placeholder="Digite o seu nome completo" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Digite o seu E-mail" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dataNiver">Data de Aniversário</label>
+                        <input type="date" name="dataNiver" id="dataNiver" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="urlFace">Perfil do Facebook</label>
+                        <input type="url" name="urlFace" id="urlFace" placeholder="Pagina do perfil do Facebook" class="form-control">
+                    </div>
+
+
+
+
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <select class="form-control" name="estado" id="estado">
+                            <option></option>
+                            <option value="PR">Paraná</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="SC">Santa Catarina</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cidade">cidade</label>
+                        <select class="form-control" name="cidade" id="cidade">
+                            <option></option>
+                            <option value="brusque">Brusque</option>
+                            <option value="itajai">Itajaí</option>
+                            <option value="guabiruba">Guabiruba</option>
+                            <option value="navegantes">Navegantes</option>
+                            <option value="balnearioCamboriu">Balneário Camboriú</option>
+                            <option value="novaTento">Nova Trento</option>
+                        </select>
+
+                        <div class="form-group mt-4">
+                            <input type="submit" value="Enviar" name="btnEnviar" class="btn btn-info btn-block">
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <p class="text-center">
+                            <a href="#" id="btnVoltar">
+                                Voltar
+                            </a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- fim novo -->
+
+
+
         <!-- Inicio do formulario de cadastro de novos usuarios -->
         <section class="row mt-5">
             <div class="col-lg-4 offset-lg-4 bg-light rounded " id="caixaRegistro">
@@ -144,6 +222,10 @@
 
                     <div class="form-group">
                         <input type="email" name="emailUsuario" id="emailUsuario" class="form-control" placeholder="E-mail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="url" name="urlImagem" id="urlImagem" placeholder="Link da imagem de perfil" class="form-control">
                     </div>
 
                     <div class="form-group">
@@ -173,67 +255,16 @@
                             </a>
                         </p>
                     </div>
+
                 </form>
             </div>
+
+
         </section>
-        
-        <section class="row">
-            <div class="col-lg-4 offset-lg-4 bg-light rounded " id="caixaNovo">
-                <h2 class="text-center mt-2">Novo Formulario</h2>
-                <form action="#" method="post" class="p-2" id="formNovo">
-                    <div class="form-group">
-                        <label for="nomeCompleto">Nome Completo</label>
-                        <input type="text" name="nomeCompleto" id="nomeCompleto" required placeholder="Digite seu nome completo" class="form-control">
-                    </div>
 
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" name="email" id="email" required placeholder="Digite seu nome E-mail" class="form-control">
-                    </div>
 
-                    <div class="form-group">
-                        <label for="dataNiver">Data de Aniversario</label>
-                        <input type="date" name="dataNiver" id="dataNiver" required class="form-control">
-                    </div>
 
-                    <div class="form-group">
-                        <label for="urlFace">Perfil do Facebook</label>
-                        <input type="url" name="urlFace" id="urlFace" required placeholder="Pagina do perfil do Facebook" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="urlImagem">Imagem de Perfil</label>
-                        <input type="url" name="urlImagem" id="urlImagem" required placeholder="Link da imagem do seu perfil" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="estado">Estado</label>
-                        <select class="form-control" name="estado" id="estado">
-                            <option></option>
-                            <option value="PR">Paraná</option>
-                            <option value="RS">Rio grande do sul</option>
-                            <option value="SC">Santa Catarina</option>
-                        </select>
-
-                        <div class="form-group">
-                            <label for="cidade">Cidade</label>
-                            <select class="form-control" name="cidade" id="cidade">
-                                <option></option>
-                                <option value="Brusque">Brusque</option>
-                                <option value="Guabiruba">Guabiruba</option>
-                                <option value="Itajai">Itajai</option>
-                                <option value="Gaspar">Gaspar</option>
-                                <option value="Botuvera">Botuvera</option>
-                                <option value="Nova trento">Nova trento</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" value="Entrar" name="btnEntrar" id="btnEntrar" class="btn btn-primary btn-block">
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" value="Voltar" name="btnVoltar" id="btnVoltar" class="btn btn-primary btn-block">
-                        </div>
-                        <!-- Final do formulario de cadastro de novos usuarios -->
+        <!-- Final do formulario de cadastro de novos usuarios -->
     </main>
 
 
@@ -265,7 +296,6 @@
 
             $("#forSenha").validate();
 
-
             //mostrar e ocultar formulario
 
             $("#btnEsqueci").click(function() {
@@ -288,14 +318,23 @@
                 $("#caixaRegistro").hide(); //mostrar}
             });
 
-            $("#btnMostrar").click(function() {
-                $("#caixaNovo").show(); //mostrar
-                $("#caixaLogin").hide(); //ocultar
+            $("#btnRegistrado2").click(function() {
+                $("#caixaMostrar").show(); //ocultar
+                $("#btnNovo").hide(); //mostrar}
             });
+
             $("#btnVoltar").click(function() {
-                $("#caixaLogin").show(); //mostrar
-                $("#caixaNovo").hide(); //ocultar
+                $("#caixaLogin").show(); //ocultar
+                $("#caixaNovo").hide(); //mostrar}
             });
+
+            $("#btnNovo").click(function() {
+                $("#caixaNovo").show(); //Mostrar
+                $("#caixaLogin").hide(); //Ocultar
+            });
+
+
+
 
             //cadastro de novo usuario 
             $("#btnRegistrar").click(function(e) {
@@ -316,8 +355,6 @@
                 }
                 return true;
             });
-
-
             //login 
             $("#btnEntrar").click(function(e) {
                 if (document
@@ -347,6 +384,7 @@
 
             //recuperção de senha
             $("#btnGerar").click(function(e) {
+
                 if (document
                     .querySelector("#formSenha")
                     .checkValidity()) {
@@ -363,6 +401,7 @@
                     });
                 }
                 return true;
+
             });
 
         });
