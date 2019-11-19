@@ -1,7 +1,6 @@
-<?php
-require_once "session.php";
+<?php 
+    require_once "session.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -13,12 +12,12 @@ require_once "session.php";
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>pagina de perfil</title>
+    <title>Página de Perfil</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">D R A N K A</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <a class="navbar-brand" href="#">TNX Systems</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,7 +36,7 @@ require_once "session.php";
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">Sobre</a>
-                        <a class="dropdown-item" href="fotos.php">fotos</a>
+                        <a class="dropdown-item" href="#">Fotos</a>
                         <a class="dropdown-item" href="sair.php">Sair</a>
                     </div>
                 </li>
@@ -45,43 +44,25 @@ require_once "session.php";
         </div>
     </nav>
 
-
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">boas vindas</h1>
-            <h2 class="display-2 text-center bg-info rounded p-1 text-ligth">
+            <h1 class="display-4">Boas vindas</h1>
 
+            <h2 class="display-2 text-center rounded p-1" 
+            style="background-color: deepPink; color: deepSkyBlue;">
                 <?= $nomeCompleto ?>
             </h2>
-
-            <div class="row">
-                <div class="col-4">
-
-                    <img class="img-thumbnail" src="<?= $urlImagem ?>" />
-
-                </div>
-                <div class="col-8">
-                    <h2 class="text-center">
-                        E-mail do Usuario:
-                        <a href="mailto:<?= $emailUsuario ?>">
-                            <?= $emailUsuario ?>
-                        </a>
-                    </h2>
-
-                    <h2 class="text-center">
-                        Registrado em: <?= $dataCriado ?>
-
-                    </h2>
-
-
-
-                </div>
-            </div>
-
+            <h2 class="text-center">
+                E-mail do Usuário: 
+                <a href="mailto:<?=$emailUsuario?>">
+                    <?=$emailUsuario?>
+                </a>
+            </h2>
+            <h2 class="text-center">
+                Registrado em: <?= $dataCriado  ?>
+            </h2>
         </div>
     </div>
-
-
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
